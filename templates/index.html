@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tweet Streamer Analyzer Project</title>
+</head>
+<body>
+    <header>
+        <h1>Tweet Streamer Analyzer Project</h1>
+    </header>
+    <main>
+        <section class="dataframes">
+            <div class="dataframe">
+                <h2>Fans by Housemate Data Frame</h2>
+                {{ fans_by_housemate_df | safe }}
+                <a href="#fbh_bc">See Graph</a>
+            </div>
+            <div class="dataframe">
+                <h2>Average Number of Followers of Fans by Housemate Data Frame</h2>
+                {{ followers_of_fans_by_hm_df | safe }}
+                <a href="#fbh_bc">See Graph</a>
+            </div>
+            <div class="dataframe">
+                <h2>Fans of Housemates by Location</h2>
+                {{ fans_by_location_df | safe }}
+                <a href="#fbl_bc">See Graph</a>
+            </div>
+        </section>
+        <section class="charts">
+            <div class="chart" id="fbh_bc">
+                <h2>Fans by Housemate Bar Chart</h2>
+                <img src="/fans_by_hm_bar_chart/" alt="Fans By Housemate Bar Chart">
+            </div>
+            <div class="chart" id="fbl_bc">
+                <h2>Fans of Housemates by Location</h2>
+                <img src="/fans_by_location_bar_chart/" alt="Fans of Housemates by Location Bar Chart">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
